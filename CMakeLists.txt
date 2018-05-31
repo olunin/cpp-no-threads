@@ -43,6 +43,7 @@ file(GLOB_RECURSE EXAMPLES_SOURCES examples/*.cpp examples/*.h)
 add_executable(examples ${EXAMPLES_SOURCES})
 target_link_libraries(examples gmock_main gmock gtest)
 
-#-fsanitize=thread
-#SET( CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -fsanitize=thread -g" )
-#SET( CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -fsanitize=thread -g" )
+# sanitizer
+
+SET( CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -fsanitize=thread -g" )
+SET( CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -fsanitize=thread -g" )
