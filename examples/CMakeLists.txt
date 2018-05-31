@@ -10,7 +10,7 @@ find_package(Threads REQUIRED)
 file(GLOB_RECURSE EXAMPLES_SOURCES *.cpp *.h)
 
 add_executable(examples ${EXAMPLES_SOURCES})
-target_link_libraries(examples gmock gtest)
+target_link_libraries(examples gmock_main gmock gtest)
 
 #-fsanitize=thread
 #SET( CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -fsanitize=thread -g" )
